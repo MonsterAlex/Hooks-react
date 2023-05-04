@@ -1,11 +1,11 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
-import { LogoSpace, MainSpace, FormSpace, Img } from "./styles";
+import { LogoSpace, FormSpace, Img } from "./styles";
 import DatosUsuario from "./DatosUsuario";
 import DatosPersonales from "./DatosPersonales";
 import DatosEntrega from "./DatosEntrega";
-import Complete from "./Complete";
-import Stepper from "../Stepper";
+/*import Complete from "./Complete";
+import Stepper from "../Stepper";*/
 
 const Form = () => {
   return (
