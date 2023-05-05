@@ -3,7 +3,7 @@ import { TextField, Button, Box } from "@mui/material";
 
 import { validarEmail, validarPassword } from "./validaciones";
 
-const DatosUsuario= () => {
+const DatosUsuario= ({ updateStep }) => {
 
   const [email, setEmail] = useState({value: '', valid: null})
   const [password, setPassword] = useState({value: '', valid: null})
@@ -23,8 +23,8 @@ const DatosUsuario= () => {
         e.preventDefault();
         if(email.valid && password.valid)
         {
-          console.log("siguiente formulario")
-          console.log(email, password)
+          console.log("Correo: ", email, "contraseña: ", password);
+          updateStep(1);
         }
         else
         {
@@ -59,7 +59,7 @@ const DatosUsuario= () => {
         margin="dense"
         type="password"
         error={password.valid === false}
-        helperText={!password.valid === false && "Ingresa una contraseña valida, al menos 8 caracteres y maximo 20"}
+        helperText={password.valid === false && "Ingresa una contraseña valida, al menos 8 caracteres y maximo 20"}
         value={ password.value }
         onChange={ (input) => {
           
